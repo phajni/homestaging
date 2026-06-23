@@ -10,14 +10,35 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #F2F0E7; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
         /* Lightbox */
         #lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; cursor: pointer; }
         #lightbox img { max-width: 90%; max-height: 90%; border: 4px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        
+        /* CTA Gomb stílus */
+        .cta-button {
+            background-color: #a67c52;
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        .cta-button:hover { 
+            background-color: #8c6742; 
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
     </style>
 </head>
 <body class="text-stone-900">
 
-    <!-- Navigáció -->
     <nav class="sticky top-0 z-50 flex justify-between items-center py-4 px-10 bg-[#F2F0E7]/90 backdrop-blur-sm border-b border-black/5">
         <div class="font-bold text-lg tracking-widest">BERECZ ILDIKÓ</div>
         <div class="space-x-8 text-sm font-medium flex items-center">
@@ -28,12 +49,15 @@
         </div>
     </nav>
 
-    <!-- 1. Fejléc -->
-    <section>
+    <section class="relative w-full">
         <img src="hero-header.jpg" class="w-full h-auto shadow-2xl" alt="Berecz Ildikó">
+        <div class="absolute bottom-12 left-12">
+            <a href="mailto:berecz.ildiko@fortiselit.hu" class="cta-button">
+                ÉRDEKEL, ÍROK ILDIKÓNAK!
+            </a>
+        </div>
     </section>
 
-    <!-- 2. Edukáció (Hosszú változat) -->
     <section id="mi-az" class="py-24 px-10 max-w-3xl mx-auto text-center" data-aos="fade-up">
         <h2 class="text-4xl mb-8">Mi az a Home Staging?</h2>
         <p class="text-lg text-stone-700 leading-relaxed italic">
@@ -44,7 +68,6 @@
         </p>
     </section>
 
-    <!-- 3. Sikersztori -->
     <section id="siker" class="py-24 px-6 bg-black/5">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl text-center mb-12 italic">Sikersztori: Zugló</h2>
@@ -58,7 +81,6 @@
         </div>
     </section>
 
-    <!-- 4. Portfólió -->
     <section id="portfolio" class="py-24 px-6">
         <h2 class="text-4xl text-center mb-16" data-aos="fade-up">Portfolio</h2>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -71,13 +93,12 @@
         </div>
     </section>
 
-    <!-- 5. Kapcsolat és Social -->
     <footer id="kapcsolat" class="py-24 text-center border-t border-black/10">
         <h2 class="text-3xl mb-12">Lépjünk kapcsolatba</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto text-left px-6">
             <div>
                 <h3 class="text-xl font-bold mb-6 font-serif">Közvetlen elérés</h3>
-                <p class="mb-4 text-lg">📧 ildiko.berecz@email.hu</p>
+                <p class="mb-4 text-lg">📧 berecz.ildiko@fortiselit.hu</p>
                 <p class="text-lg">📞 +36 70 442 7051</p>
             </div>
             <div>
@@ -91,17 +112,8 @@
                 </div>
             </div>
         </div>
-        <div class="mt-20 p-8 max-w-lg mx-auto bg-white/40 border border-black/5">
-            <p class="font-bold mb-2">Ingatlanpiaci tippek és inspirációk</p>
-            <p class="text-sm text-stone-600 mb-6">Iratkozz fel, hogy elsőként értesülj legfrissebb munkáimról és értéknövelő tippjeimről.</p>
-            <div class="flex flex-col sm:flex-row gap-2">
-                <input type="email" placeholder="E-mail címed" class="flex-1 p-2 border border-black/10 bg-transparent">
-                <button class="bg-stone-800 text-white px-6 py-2 hover:bg-stone-700">Feliratkozom</button>
-            </div>
-        </div>
     </footer>
 
-    <!-- Lightbox -->
     <div id="lightbox" onclick="this.style.display='none'">
         <img src="" id="lightbox-img">
     </div>
