@@ -15,7 +15,7 @@
         #lightbox { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; cursor: pointer; }
         #lightbox img { max-width: 90%; max-height: 90%; border: 4px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
         
-        /* CTA Gomb stílus */
+        /* CTA Gomb */
         .cta-button {
             background-color: #a67c52;
             color: white;
@@ -39,6 +39,7 @@
 </head>
 <body class="text-stone-900">
 
+    <!-- Navigáció -->
     <nav class="sticky top-0 z-50 flex justify-between items-center py-4 px-10 bg-[#F2F0E7]/90 backdrop-blur-sm border-b border-black/5">
         <div class="font-bold text-lg tracking-widest">BERECZ ILDIKÓ</div>
         <div class="space-x-8 text-sm font-medium flex items-center">
@@ -49,31 +50,26 @@
         </div>
     </nav>
 
+    <!-- 1. Fejléc -->
     <section class="relative w-full">
         <img src="hero-header.jpg" class="w-full h-auto shadow-2xl" alt="Berecz Ildikó">
         <div class="absolute bottom-12 left-12">
-            <a href="mailto:berecz.ildiko@fortiselit.hu" class="cta-button">
-                ÉRDEKEL, ÍROK ILDIKÓNAK!
-            </a>
+            <a href="mailto:berecz.ildiko@fortiselit.hu" class="cta-button">ÉRDEKEL, ÍROK ILDIKÓNAK!</a>
         </div>
     </section>
 
+    <!-- 2. Edukáció -->
     <section id="mi-az" class="py-24 px-10 max-w-3xl mx-auto text-center" data-aos="fade-up">
         <h2 class="text-4xl mb-8">Mi az a Home Staging?</h2>
-        <p class="text-lg text-stone-700 leading-relaxed italic">
-            "A home staging az ingatlanértékesítés egyik leghatékonyabb marketingeszköze."
-        </p>
-        <p class="mt-6 text-stone-700 leading-relaxed">
-            Nem pusztán lakberendezés: az ingatlanban rejlő lehetőségek feltárása, az előnyök tudatos kiemelése és az ingatlan célcsoportra szabása. Célunk egy olyan harmonikus környezet teremtése, amelyben a vevők azonnal otthon érzik magukat. A folyamat során az ingatlant mint terméket kezeljük, amelyet a piacon a lehető legvonzóbb formában kell prezentálni. Az így felkészített ingatlan kiemelkedik a kínálatból, gyorsabban és jellemzően 10-15%-kal magasabb áron kel el, mivel a vevők nem az ingatlan hiányosságaival, hanem annak értékével találkoznak.
-        </p>
+        <p class="text-lg text-stone-700 leading-relaxed italic">"A home staging az ingatlanértékesítés egyik leghatékonyabb marketingeszköze."</p>
+        <p class="mt-6 text-stone-700 leading-relaxed">Nem pusztán lakberendezés: az ingatlanban rejlő lehetőségek feltárása, az előnyök tudatos kiemelése és az ingatlan célcsoportra szabása. Célunk egy olyan harmonikus környezet teremtése, amelyben a vevők azonnal otthon érzik magukat. A folyamat során az ingatlant mint terméket kezeljük, amelyet a piacon a lehető legvonzóbb formában kell prezentálni. Az így felkészített ingatlan kiemelkedik a kínálatból, gyorsabban és jellemzően 10-15%-kal magasabb áron kel el, mivel a vevők nem az ingatlan hiányosságaival, hanem annak értékével találkoznak.</p>
     </section>
 
+    <!-- 3. Sikersztori -->
     <section id="siker" class="py-24 px-6 bg-black/5">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl text-center mb-12 italic">Sikersztori: Zugló</h2>
-            <p class="text-lg mb-12 text-center max-w-4xl mx-auto leading-relaxed">
-                40 millió forintos várakozással szemben <strong>54.850.000 Ft-ért</strong> kelt el a lakás 4 nap alatt. A tudatos felkészítés megtérülése itt több mint 14 millió forint volt.
-            </p>
+            <p class="text-lg mb-12 text-center max-w-4xl mx-auto leading-relaxed">40 millió forintos várakozással szemben <strong>54.850.000 Ft-ért</strong> kelt el a lakás 4 nap alatt. A tudatos felkészítés megtérülése itt több mint 14 millió forint volt.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="zoom-in">
                 <img src="zuglo-kollazs-1.jpg" class="cursor-pointer shadow-xl w-full hover:scale-[1.01] transition" onclick="openLightbox(this.src)" alt="Konyha">
                 <img src="zuglo-kollazs-2.jpg" class="cursor-pointer shadow-xl w-full hover:scale-[1.01] transition" onclick="openLightbox(this.src)" alt="Nappali">
@@ -81,6 +77,7 @@
         </div>
     </section>
 
+    <!-- 4. Portfólió -->
     <section id="portfolio" class="py-24 px-6">
         <h2 class="text-4xl text-center mb-16" data-aos="fade-up">Portfolio</h2>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -93,6 +90,7 @@
         </div>
     </section>
 
+    <!-- 5. Kapcsolat és Social -->
     <footer id="kapcsolat" class="py-24 text-center border-t border-black/10">
         <h2 class="text-3xl mb-12">Lépjünk kapcsolatba</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto text-left px-6">
@@ -112,8 +110,19 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Hírleveles rész -->
+        <div class="mt-20 p-8 max-w-lg mx-auto bg-white/40 border border-black/5">
+            <p class="font-bold mb-2">Ingatlanpiaci tippek és inspirációk</p>
+            <p class="text-sm text-stone-600 mb-6">Iratkozz fel, hogy elsőként értesülj legfrissebb munkáimról és értéknövelő tippjeimről.</p>
+            <div class="flex flex-col sm:flex-row gap-2">
+                <input type="email" placeholder="E-mail címed" class="flex-1 p-2 border border-black/10 bg-transparent">
+                <button class="bg-stone-800 text-white px-6 py-2 hover:bg-stone-700">Feliratkozom</button>
+            </div>
+        </div>
     </footer>
 
+    <!-- Lightbox -->
     <div id="lightbox" onclick="this.style.display='none'">
         <img src="" id="lightbox-img">
     </div>
